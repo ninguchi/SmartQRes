@@ -1,0 +1,985 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		666690D21A8E60DE003A15F2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666690D11A8E60DE003A15F2 /* WelcomeViewController.swift */; };
+		666690D41A8E6308003A15F2 /* UserStaffController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666690D31A8E6308003A15F2 /* UserStaffController.swift */; };
+		666690D61A8E66E8003A15F2 /* smartqlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666690D51A8E66E8003A15F2 /* smartqlist.plist */; };
+		669053291A9C178B00EBCF59 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669053281A9C178B00EBCF59 /* ViewControllerUtils.swift */; };
+		6690532B1A9E204C00EBCF59 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690532A1A9E204C00EBCF59 /* DataController.swift */; };
+		9D0FAD02E9CF826194CD4126 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 105AB39828681B7066B81931 /* libPods.a */; };
+		FF10B5111A59530C00C30E41 /* ManageQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10B5101A59530C00C30E41 /* ManageQTableViewCell.swift */; };
+		FF120D081A552B3B00F5E8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF120D071A552B3B00F5E8A3 /* AppDelegate.swift */; };
+		FF120D0B1A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF120D091A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld */; };
+		FF120D101A552B3B00F5E8A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF120D0E1A552B3B00F5E8A3 /* Main.storyboard */; };
+		FF120D121A552B3B00F5E8A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF120D111A552B3B00F5E8A3 /* Images.xcassets */; };
+		FF120D151A552B3B00F5E8A3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF120D131A552B3B00F5E8A3 /* LaunchScreen.xib */; };
+		FF120D211A552B3B00F5E8A3 /* SmartQResTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF120D201A552B3B00F5E8A3 /* SmartQResTests.swift */; };
+		FF120D361A55392900F5E8A3 /* ManageQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF120D351A55392900F5E8A3 /* ManageQViewController.swift */; };
+		FF120D381A5539C300F5E8A3 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF120D371A5539C300F5E8A3 /* MasterTableViewController.swift */; };
+		FF1A9C3D1A593FC70059219A /* ConfirmBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A9C3C1A593FC70059219A /* ConfirmBookingViewController.swift */; };
+		FF1F5FC21A5A413800646223 /* BookingQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F5FC11A5A413800646223 /* BookingQViewController.swift */; };
+		FF1F5FC41A5A415200646223 /* BranchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F5FC31A5A415200646223 /* BranchInfoViewController.swift */; };
+		FF1F5FCC1A5A41EE00646223 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F5FC91A5A41EE00646223 /* LogInViewController.swift */; };
+		FF1F5FCD1A5A41EE00646223 /* MainDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F5FCA1A5A41EE00646223 /* MainDetailViewController.swift */; };
+		FF2257321AAAB60600FFFC65 /* MainDetailBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2257311AAAB60600FFFC65 /* MainDetailBranchViewController.swift */; };
+		FF3ECC7D1AB44D98003A2E5D /* ManageBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3ECC7C1AB44D98003A2E5D /* ManageBranchViewController.swift */; };
+		FF3ECC7F1AB44DBB003A2E5D /* ManageBranchAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3ECC7E1AB44DBB003A2E5D /* ManageBranchAdminTableViewController.swift */; };
+		FF3ECC811AB44DEC003A2E5D /* ViewBranchAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3ECC801AB44DEC003A2E5D /* ViewBranchAdminViewController.swift */; };
+		FF3ECC831AB44E0F003A2E5D /* EditBranchAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3ECC821AB44E0F003A2E5D /* EditBranchAdminViewController.swift */; };
+		FF3ECC851AB454C8003A2E5D /* MainDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3ECC841AB454C8003A2E5D /* MainDetailTableViewController.swift */; };
+		FF3ECC871AB47A9E003A2E5D /* AddBranchAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3ECC861AB47A9E003A2E5D /* AddBranchAdminViewController.swift */; };
+		FF489A471A5F9806003F3C38 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FF489A451A5F9806003F3C38 /* Podfile */; };
+		FF489A481A5F9806003F3C38 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = FF489A461A5F9806003F3C38 /* Podfile.lock */; };
+		FF489A4C1A62D4DF003F3C38 /* Background_wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF489A4B1A62D4DF003F3C38 /* Background_wood.jpg */; };
+		FF489A4E1A62D5F3003F3C38 /* SmartQ_logo_OrangeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = FF489A4D1A62D5F3003F3C38 /* SmartQ_logo_OrangeBG.png */; };
+		FF5105791A5D85C70047ADAB /* MainDetailResViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5105781A5D85C70047ADAB /* MainDetailResViewController.swift */; };
+		FF518F331A8B41BF006F9663 /* menu_icon_resized1.png in Resources */ = {isa = PBXBuildFile; fileRef = FF518F321A8B41BF006F9663 /* menu_icon_resized1.png */; };
+		FF518F351A8B439D006F9663 /* menu_icon_re.png in Resources */ = {isa = PBXBuildFile; fileRef = FF518F341A8B439D006F9663 /* menu_icon_re.png */; };
+		FF52C97F1A87DC65005F83B1 /* ViewGeneralInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C97E1A87DC65005F83B1 /* ViewGeneralInfoViewController.swift */; };
+		FF52C9811A87DC78005F83B1 /* EditGeneralInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C9801A87DC78005F83B1 /* EditGeneralInfoViewController.swift */; };
+		FF52C9831A87DD4F005F83B1 /* ViewTableTypeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C9821A87DD4F005F83B1 /* ViewTableTypeSettingViewController.swift */; };
+		FF52C9851A87DD62005F83B1 /* EditTableTypeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C9841A87DD62005F83B1 /* EditTableTypeSettingViewController.swift */; };
+		FF52C9871A87DD9E005F83B1 /* ViewCustNotiSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C9861A87DD9E005F83B1 /* ViewCustNotiSettingViewController.swift */; };
+		FF52C9891A87DDAF005F83B1 /* EditCustNotiSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C9881A87DDAF005F83B1 /* EditCustNotiSettingViewController.swift */; };
+		FF52C98B1A87DF2B005F83B1 /* ViewCustNotiSettingResViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C98A1A87DF2B005F83B1 /* ViewCustNotiSettingResViewController.swift */; };
+		FF52C98D1A87DF3E005F83B1 /* EditCustNotiSettingResViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52C98C1A87DF3E005F83B1 /* EditCustNotiSettingResViewController.swift */; };
+		FF5537551AB1867C00CDCA0E /* beep-01a.wav in Resources */ = {isa = PBXBuildFile; fileRef = FF5537531AB1867C00CDCA0E /* beep-01a.wav */; };
+		FF5537561AB1867C00CDCA0E /* beep-06.wav in Resources */ = {isa = PBXBuildFile; fileRef = FF5537541AB1867C00CDCA0E /* beep-06.wav */; };
+		FF5537651AB1B4BE00CDCA0E /* 0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537571AB1B4BE00CDCA0E /* 0.m4a */; };
+		FF5537661AB1B4BE00CDCA0E /* 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537581AB1B4BE00CDCA0E /* 1.m4a */; };
+		FF5537671AB1B4BE00CDCA0E /* 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537591AB1B4BE00CDCA0E /* 2.m4a */; };
+		FF5537681AB1B4BE00CDCA0E /* 3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF55375A1AB1B4BE00CDCA0E /* 3.m4a */; };
+		FF5537691AB1B4BE00CDCA0E /* 4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF55375B1AB1B4BE00CDCA0E /* 4.m4a */; };
+		FF55376A1AB1B4BE00CDCA0E /* 5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF55375C1AB1B4BE00CDCA0E /* 5.m4a */; };
+		FF55376B1AB1B4BE00CDCA0E /* 6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF55375D1AB1B4BE00CDCA0E /* 6.m4a */; };
+		FF55376C1AB1B4BE00CDCA0E /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF55375E1AB1B4BE00CDCA0E /* 7.m4a */; };
+		FF55376D1AB1B4BE00CDCA0E /* 8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF55375F1AB1B4BE00CDCA0E /* 8.m4a */; };
+		FF55376E1AB1B4BE00CDCA0E /* 9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537601AB1B4BE00CDCA0E /* 9.m4a */; };
+		FF55376F1AB1B4BE00CDCA0E /* A.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537611AB1B4BE00CDCA0E /* A.m4a */; };
+		FF5537701AB1B4BE00CDCA0E /* B.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537621AB1B4BE00CDCA0E /* B.m4a */; };
+		FF5537711AB1B4BE00CDCA0E /* C.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537631AB1B4BE00CDCA0E /* C.m4a */; };
+		FF5537721AB1B4BE00CDCA0E /* D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FF5537641AB1B4BE00CDCA0E /* D.m4a */; };
+		FF5F691B1AB2DDE10002F5C9 /* CoCo ICHIBANYA.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F69191AB2DDE10002F5C9 /* CoCo ICHIBANYA.png */; };
+		FF5F69201AB2E6320002F5C9 /* Fuji.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F691C1AB2E6320002F5C9 /* Fuji.png */; };
+		FF5F69211AB2E6320002F5C9 /* MK.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F691D1AB2E6320002F5C9 /* MK.png */; };
+		FF5F69221AB2E6320002F5C9 /* Sizzler.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F691E1AB2E6320002F5C9 /* Sizzler.png */; };
+		FF83D0331AAC827C002E5E02 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = FF83D0311AAC827C002E5E02 /* Icon-76.png */; };
+		FF83D0341AAC827C002E5E02 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF83D0321AAC827C002E5E02 /* Icon-76@2x.png */; };
+		FFAF2AB61AAC3D4F00B7F00A /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF2AB51AAC3D4F00B7F00A /* CommonConstants.swift */; };
+		FFC744C91A8851950051B390 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C01A8851950051B390 /* Branch.swift */; };
+		FFC744CA1A8851950051B390 /* CurrentRunningNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C11A8851950051B390 /* CurrentRunningNo.swift */; };
+		FFC744CB1A8851950051B390 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C21A8851950051B390 /* Customer.swift */; };
+		FFC744CC1A8851950051B390 /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C31A8851950051B390 /* DataConnection.swift */; };
+		FFC744CD1A8851950051B390 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C41A8851950051B390 /* Queue.swift */; };
+		FFC744CE1A8851950051B390 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C51A8851950051B390 /* Restaurant.swift */; };
+		FFC744CF1A8851950051B390 /* ShoppingMall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C61A8851950051B390 /* ShoppingMall.swift */; };
+		FFC744D01A8851950051B390 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C71A8851950051B390 /* TodoItem.swift */; };
+		FFC744D11A8851950051B390 /* UserStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744C81A8851950051B390 /* UserStaff.swift */; };
+		FFC744D91A8852570051B390 /* BranchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744D31A8852570051B390 /* BranchController.swift */; };
+		FFC744DA1A8852570051B390 /* CurrentRunningNoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744D41A8852570051B390 /* CurrentRunningNoController.swift */; };
+		FFC744DB1A8852570051B390 /* CustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744D51A8852570051B390 /* CustomerController.swift */; };
+		FFC744DC1A8852570051B390 /* QueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744D61A8852570051B390 /* QueueController.swift */; };
+		FFC744DD1A8852570051B390 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744D71A8852570051B390 /* RestaurantController.swift */; };
+		FFC744DE1A8852570051B390 /* ShoppingMallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744D81A8852570051B390 /* ShoppingMallController.swift */; };
+		FFC744E01A885A6C0051B390 /* MallListResTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744DF1A885A6B0051B390 /* MallListResTableViewController.swift */; };
+		FFC744E41A885B3F0051B390 /* BranchStatusListResTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744E31A885B3F0051B390 /* BranchStatusListResTableViewController.swift */; };
+		FFC744E61A885BF40051B390 /* MallListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744E51A885BF40051B390 /* MallListTableViewController.swift */; };
+		FFC744E81A885C290051B390 /* BranchStatusListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC744E71A885C290051B390 /* BranchStatusListTableViewController.swift */; };
+		FFD714301A5D1C2900A3FA74 /* MasterResTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD7142F1A5D1C2900A3FA74 /* MasterResTableViewController.swift */; };
+		FFD714321A5D1C7B00A3FA74 /* ManageBranchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD714311A5D1C7B00A3FA74 /* ManageBranchTableViewController.swift */; };
+		FFD714351A5D1CC000A3FA74 /* ViewBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD714341A5D1CC000A3FA74 /* ViewBranchViewController.swift */; };
+		FFD714371A5D1CD200A3FA74 /* EditBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD714361A5D1CD200A3FA74 /* EditBranchViewController.swift */; };
+		FFE3B1431AB301CB0038C564 /* OISHI.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1401AB301CB0038C564 /* OISHI.png */; };
+		FFE3B1441AB301CB0038C564 /* Sukishi.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1411AB301CB0038C564 /* Sukishi.png */; };
+		FFE3B1451AB301CB0038C564 /* Yum Zaap.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1421AB301CB0038C564 /* Yum Zaap.png */; };
+		FFE3B1471AB30A610038C564 /* end.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1461AB30A610038C564 /* end.m4a */; };
+		FFF3ABE11A5E963700C983FA /* child.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF3ABDA1A5E963700C983FA /* child.png */; };
+		FFF3ABE21A5E963700C983FA /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF3ABDB1A5E963700C983FA /* man.png */; };
+		FFF3ABE31A5E963700C983FA /* wheelchair.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF3ABDC1A5E963700C983FA /* wheelchair.png */; };
+		FFF3ABE51A5E963700C983FA /* SmartQ_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFF3ABDE1A5E963700C983FA /* SmartQ_logo.jpg */; };
+		FFF3ABE61A5E963700C983FA /* SmartQ_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF3ABDF1A5E963700C983FA /* SmartQ_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF120D1B1A552B3B00F5E8A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF120CFA1A552B3B00F5E8A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF120D011A552B3B00F5E8A3;
+			remoteInfo = SmartQRes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		105AB39828681B7066B81931 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1852FA73F43A1F4261EBCE64 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		58F15B4F2336945E9BEB3E72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		666690D11A8E60DE003A15F2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		666690D31A8E6308003A15F2 /* UserStaffController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStaffController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		666690D51A8E66E8003A15F2 /* smartqlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = smartqlist.plist; sourceTree = "<group>"; };
+		669053281A9C178B00EBCF59 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		6690532A1A9E204C00EBCF59 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		FF10B5101A59530C00C30E41 /* ManageQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageQTableViewCell.swift; sourceTree = "<group>"; };
+		FF120D021A552B3B00F5E8A3 /* SmartQRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartQRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF120D061A552B3B00F5E8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF120D071A552B3B00F5E8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF120D0A1A552B3B00F5E8A3 /* SmartQRes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartQRes.xcdatamodel; sourceTree = "<group>"; };
+		FF120D0F1A552B3B00F5E8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF120D111A552B3B00F5E8A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF120D141A552B3B00F5E8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FF120D1A1A552B3B00F5E8A3 /* SmartQResTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartQResTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF120D1F1A552B3B00F5E8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF120D201A552B3B00F5E8A3 /* SmartQResTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartQResTests.swift; sourceTree = "<group>"; };
+		FF120D351A55392900F5E8A3 /* ManageQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageQViewController.swift; sourceTree = "<group>"; };
+		FF120D371A5539C300F5E8A3 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		FF1A9C3C1A593FC70059219A /* ConfirmBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBookingViewController.swift; sourceTree = "<group>"; };
+		FF1F5FC11A5A413800646223 /* BookingQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingQViewController.swift; sourceTree = "<group>"; };
+		FF1F5FC31A5A415200646223 /* BranchInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchInfoViewController.swift; sourceTree = "<group>"; };
+		FF1F5FC91A5A41EE00646223 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FF1F5FCA1A5A41EE00646223 /* MainDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailViewController.swift; sourceTree = "<group>"; };
+		FF2257311AAAB60600FFFC65 /* MainDetailBranchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailBranchViewController.swift; sourceTree = "<group>"; };
+		FF3ECC7C1AB44D98003A2E5D /* ManageBranchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBranchViewController.swift; sourceTree = "<group>"; };
+		FF3ECC7E1AB44DBB003A2E5D /* ManageBranchAdminTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBranchAdminTableViewController.swift; sourceTree = "<group>"; };
+		FF3ECC801AB44DEC003A2E5D /* ViewBranchAdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBranchAdminViewController.swift; sourceTree = "<group>"; };
+		FF3ECC821AB44E0F003A2E5D /* EditBranchAdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBranchAdminViewController.swift; sourceTree = "<group>"; };
+		FF3ECC841AB454C8003A2E5D /* MainDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailTableViewController.swift; sourceTree = "<group>"; };
+		FF3ECC861AB47A9E003A2E5D /* AddBranchAdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBranchAdminViewController.swift; sourceTree = "<group>"; };
+		FF489A451A5F9806003F3C38 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FF489A461A5F9806003F3C38 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		FF489A4B1A62D4DF003F3C38 /* Background_wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background_wood.jpg; path = SmartQRes/imageSmartQ/Background_wood.jpg; sourceTree = SOURCE_ROOT; };
+		FF489A4D1A62D5F3003F3C38 /* SmartQ_logo_OrangeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SmartQ_logo_OrangeBG.png; path = SmartQRes/imageSmartQ/SmartQ_logo_OrangeBG.png; sourceTree = SOURCE_ROOT; };
+		FF5105781A5D85C70047ADAB /* MainDetailResViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailResViewController.swift; sourceTree = "<group>"; };
+		FF518F321A8B41BF006F9663 /* menu_icon_resized1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_resized1.png; sourceTree = "<group>"; };
+		FF518F341A8B439D006F9663 /* menu_icon_re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_re.png; sourceTree = "<group>"; };
+		FF52C97E1A87DC65005F83B1 /* ViewGeneralInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGeneralInfoViewController.swift; sourceTree = "<group>"; };
+		FF52C9801A87DC78005F83B1 /* EditGeneralInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGeneralInfoViewController.swift; sourceTree = "<group>"; };
+		FF52C9821A87DD4F005F83B1 /* ViewTableTypeSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTableTypeSettingViewController.swift; sourceTree = "<group>"; };
+		FF52C9841A87DD62005F83B1 /* EditTableTypeSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableTypeSettingViewController.swift; sourceTree = "<group>"; };
+		FF52C9861A87DD9E005F83B1 /* ViewCustNotiSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustNotiSettingViewController.swift; sourceTree = "<group>"; };
+		FF52C9881A87DDAF005F83B1 /* EditCustNotiSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCustNotiSettingViewController.swift; sourceTree = "<group>"; };
+		FF52C98A1A87DF2B005F83B1 /* ViewCustNotiSettingResViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustNotiSettingResViewController.swift; sourceTree = "<group>"; };
+		FF52C98C1A87DF3E005F83B1 /* EditCustNotiSettingResViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCustNotiSettingResViewController.swift; sourceTree = "<group>"; };
+		FF5537531AB1867C00CDCA0E /* beep-01a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-01a.wav"; sourceTree = "<group>"; };
+		FF5537541AB1867C00CDCA0E /* beep-06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-06.wav"; sourceTree = "<group>"; };
+		FF5537571AB1B4BE00CDCA0E /* 0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0.m4a; sourceTree = "<group>"; };
+		FF5537581AB1B4BE00CDCA0E /* 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.m4a; sourceTree = "<group>"; };
+		FF5537591AB1B4BE00CDCA0E /* 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.m4a; sourceTree = "<group>"; };
+		FF55375A1AB1B4BE00CDCA0E /* 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.m4a; sourceTree = "<group>"; };
+		FF55375B1AB1B4BE00CDCA0E /* 4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.m4a; sourceTree = "<group>"; };
+		FF55375C1AB1B4BE00CDCA0E /* 5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.m4a; sourceTree = "<group>"; };
+		FF55375D1AB1B4BE00CDCA0E /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6.m4a; sourceTree = "<group>"; };
+		FF55375E1AB1B4BE00CDCA0E /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7.m4a; sourceTree = "<group>"; };
+		FF55375F1AB1B4BE00CDCA0E /* 8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.m4a; sourceTree = "<group>"; };
+		FF5537601AB1B4BE00CDCA0E /* 9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.m4a; sourceTree = "<group>"; };
+		FF5537611AB1B4BE00CDCA0E /* A.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = A.m4a; sourceTree = "<group>"; };
+		FF5537621AB1B4BE00CDCA0E /* B.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = B.m4a; sourceTree = "<group>"; };
+		FF5537631AB1B4BE00CDCA0E /* C.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = C.m4a; sourceTree = "<group>"; };
+		FF5537641AB1B4BE00CDCA0E /* D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = D.m4a; sourceTree = "<group>"; };
+		FF5F69191AB2DDE10002F5C9 /* CoCo ICHIBANYA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CoCo ICHIBANYA.png"; sourceTree = SOURCE_ROOT; };
+		FF5F691C1AB2E6320002F5C9 /* Fuji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fuji.png; sourceTree = SOURCE_ROOT; };
+		FF5F691D1AB2E6320002F5C9 /* MK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MK.png; sourceTree = SOURCE_ROOT; };
+		FF5F691E1AB2E6320002F5C9 /* Sizzler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sizzler.png; sourceTree = SOURCE_ROOT; };
+		FF7668271A868FA0004DFDC9 /* SmartQRes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartQRes-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF83D0311AAC827C002E5E02 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		FF83D0321AAC827C002E5E02 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		FFAF2AB51AAC3D4F00B7F00A /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		FFC744C01A8851950051B390 /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		FFC744C11A8851950051B390 /* CurrentRunningNo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRunningNo.swift; sourceTree = "<group>"; };
+		FFC744C21A8851950051B390 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		FFC744C31A8851950051B390 /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
+		FFC744C41A8851950051B390 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		FFC744C51A8851950051B390 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		FFC744C61A8851950051B390 /* ShoppingMall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingMall.swift; sourceTree = "<group>"; };
+		FFC744C71A8851950051B390 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		FFC744C81A8851950051B390 /* UserStaff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStaff.swift; sourceTree = "<group>"; };
+		FFC744D31A8852570051B390 /* BranchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchController.swift; sourceTree = "<group>"; };
+		FFC744D41A8852570051B390 /* CurrentRunningNoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRunningNoController.swift; sourceTree = "<group>"; };
+		FFC744D51A8852570051B390 /* CustomerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerController.swift; sourceTree = "<group>"; };
+		FFC744D61A8852570051B390 /* QueueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueController.swift; sourceTree = "<group>"; };
+		FFC744D71A8852570051B390 /* RestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		FFC744D81A8852570051B390 /* ShoppingMallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingMallController.swift; sourceTree = "<group>"; };
+		FFC744DF1A885A6B0051B390 /* MallListResTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallListResTableViewController.swift; sourceTree = "<group>"; };
+		FFC744E31A885B3F0051B390 /* BranchStatusListResTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchStatusListResTableViewController.swift; sourceTree = "<group>"; };
+		FFC744E51A885BF40051B390 /* MallListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallListTableViewController.swift; sourceTree = "<group>"; };
+		FFC744E71A885C290051B390 /* BranchStatusListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchStatusListTableViewController.swift; sourceTree = "<group>"; };
+		FFD7142F1A5D1C2900A3FA74 /* MasterResTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterResTableViewController.swift; sourceTree = "<group>"; };
+		FFD714311A5D1C7B00A3FA74 /* ManageBranchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBranchTableViewController.swift; sourceTree = "<group>"; };
+		FFD714341A5D1CC000A3FA74 /* ViewBranchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBranchViewController.swift; sourceTree = "<group>"; };
+		FFD714361A5D1CD200A3FA74 /* EditBranchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBranchViewController.swift; sourceTree = "<group>"; };
+		FFE3B1401AB301CB0038C564 /* OISHI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OISHI.png; sourceTree = SOURCE_ROOT; };
+		FFE3B1411AB301CB0038C564 /* Sukishi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sukishi.png; sourceTree = SOURCE_ROOT; };
+		FFE3B1421AB301CB0038C564 /* Yum Zaap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yum Zaap.png"; sourceTree = SOURCE_ROOT; };
+		FFE3B1461AB30A610038C564 /* end.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = end.m4a; sourceTree = "<group>"; };
+		FFF3ABDA1A5E963700C983FA /* child.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = child.png; sourceTree = "<group>"; };
+		FFF3ABDB1A5E963700C983FA /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
+		FFF3ABDC1A5E963700C983FA /* wheelchair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheelchair.png; sourceTree = "<group>"; };
+		FFF3ABDE1A5E963700C983FA /* SmartQ_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SmartQ_logo.jpg; path = SmartQRes/imageSmartQ/SmartQ_logo.jpg; sourceTree = SOURCE_ROOT; };
+		FFF3ABDF1A5E963700C983FA /* SmartQ_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SmartQ_logo.png; path = SmartQRes/imageSmartQ/SmartQ_logo.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF120CFF1A552B3B00F5E8A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D0FAD02E9CF826194CD4126 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF120D171A552B3B00F5E8A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6F7AEEC2DB72374D6BAB831 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1852FA73F43A1F4261EBCE64 /* Pods.debug.xcconfig */,
+				58F15B4F2336945E9BEB3E72 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEF8A125ADA70B454A928014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				105AB39828681B7066B81931 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF10B52B1A599C9B00C30E41 /* Branch Information */ = {
+			isa = PBXGroup;
+			children = (
+				FF1F5FC31A5A415200646223 /* BranchInfoViewController.swift */,
+				FF52C9861A87DD9E005F83B1 /* ViewCustNotiSettingViewController.swift */,
+				FF52C9881A87DDAF005F83B1 /* EditCustNotiSettingViewController.swift */,
+				FF52C9821A87DD4F005F83B1 /* ViewTableTypeSettingViewController.swift */,
+				FF52C9841A87DD62005F83B1 /* EditTableTypeSettingViewController.swift */,
+				FF52C97E1A87DC65005F83B1 /* ViewGeneralInfoViewController.swift */,
+				FF52C9801A87DC78005F83B1 /* EditGeneralInfoViewController.swift */,
+				FFC744E51A885BF40051B390 /* MallListTableViewController.swift */,
+				FFC744E71A885C290051B390 /* BranchStatusListTableViewController.swift */,
+			);
+			name = "Branch Information";
+			sourceTree = "<group>";
+		};
+		FF10B52C1A599CBC00C30E41 /* Manage Q */ = {
+			isa = PBXGroup;
+			children = (
+				FF120D351A55392900F5E8A3 /* ManageQViewController.swift */,
+				FF10B5101A59530C00C30E41 /* ManageQTableViewCell.swift */,
+			);
+			name = "Manage Q";
+			sourceTree = "<group>";
+		};
+		FF10B52D1A599CEF00C30E41 /* Booking Q */ = {
+			isa = PBXGroup;
+			children = (
+				FF1F5FC11A5A413800646223 /* BookingQViewController.swift */,
+				FF1A9C3C1A593FC70059219A /* ConfirmBookingViewController.swift */,
+			);
+			name = "Booking Q";
+			sourceTree = "<group>";
+		};
+		FF120CF91A552B3B00F5E8A3 = {
+			isa = PBXGroup;
+			children = (
+				FF489A451A5F9806003F3C38 /* Podfile */,
+				FF489A461A5F9806003F3C38 /* Podfile.lock */,
+				FF120D041A552B3B00F5E8A3 /* SmartQRes */,
+				FF120D1D1A552B3B00F5E8A3 /* SmartQResTests */,
+				FF120D031A552B3B00F5E8A3 /* Products */,
+				A6F7AEEC2DB72374D6BAB831 /* Pods */,
+				AEF8A125ADA70B454A928014 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FF120D031A552B3B00F5E8A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF120D021A552B3B00F5E8A3 /* SmartQRes.app */,
+				FF120D1A1A552B3B00F5E8A3 /* SmartQResTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF120D041A552B3B00F5E8A3 /* SmartQRes */ = {
+			isa = PBXGroup;
+			children = (
+				FF120D2E1A552DD900F5E8A3 /* ImageSmartQ */,
+				FF5537521AB1863E00CDCA0E /* Sound */,
+				FFC744D21A8852170051B390 /* Controller */,
+				FFC744BF1A88514F0051B390 /* Model */,
+				FFD7142C1A5D1BB300A3FA74 /* Restaurant Admin */,
+				FFD7142B1A5D1A7300A3FA74 /* Branch Admin */,
+				FF120D111A552B3B00F5E8A3 /* Images.xcassets */,
+				FF120D131A552B3B00F5E8A3 /* LaunchScreen.xib */,
+				FF120D091A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld */,
+				FF120D051A552B3B00F5E8A3 /* Supporting Files */,
+				FF7668271A868FA0004DFDC9 /* SmartQRes-Bridging-Header.h */,
+				FF120D071A552B3B00F5E8A3 /* AppDelegate.swift */,
+				FF1F5FC91A5A41EE00646223 /* LogInViewController.swift */,
+				FF120D0E1A552B3B00F5E8A3 /* Main.storyboard */,
+				FFC744C31A8851950051B390 /* DataConnection.swift */,
+				666690D11A8E60DE003A15F2 /* WelcomeViewController.swift */,
+				669053281A9C178B00EBCF59 /* ViewControllerUtils.swift */,
+				FF1F5FCA1A5A41EE00646223 /* MainDetailViewController.swift */,
+				FFAF2AB51AAC3D4F00B7F00A /* CommonConstants.swift */,
+				FF3ECC841AB454C8003A2E5D /* MainDetailTableViewController.swift */,
+			);
+			path = SmartQRes;
+			sourceTree = "<group>";
+		};
+		FF120D051A552B3B00F5E8A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				666690D51A8E66E8003A15F2 /* smartqlist.plist */,
+				FF120D061A552B3B00F5E8A3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF120D1D1A552B3B00F5E8A3 /* SmartQResTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF120D201A552B3B00F5E8A3 /* SmartQResTests.swift */,
+				FF120D1E1A552B3B00F5E8A3 /* Supporting Files */,
+			);
+			path = SmartQResTests;
+			sourceTree = "<group>";
+		};
+		FF120D1E1A552B3B00F5E8A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF120D1F1A552B3B00F5E8A3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF120D2E1A552DD900F5E8A3 /* ImageSmartQ */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F69171AB2DDC60002F5C9 /* Restaurant */,
+				FF489A4D1A62D5F3003F3C38 /* SmartQ_logo_OrangeBG.png */,
+				FF489A4B1A62D4DF003F3C38 /* Background_wood.jpg */,
+				FFF3ABD91A5E963700C983FA /* ManageQ_icon */,
+				FFF3ABDE1A5E963700C983FA /* SmartQ_logo.jpg */,
+				FFF3ABDF1A5E963700C983FA /* SmartQ_logo.png */,
+			);
+			name = ImageSmartQ;
+			path = ../../../imageSmartQ;
+			sourceTree = "<group>";
+		};
+		FF5537521AB1863E00CDCA0E /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3B1461AB30A610038C564 /* end.m4a */,
+				FF5537571AB1B4BE00CDCA0E /* 0.m4a */,
+				FF5537581AB1B4BE00CDCA0E /* 1.m4a */,
+				FF5537591AB1B4BE00CDCA0E /* 2.m4a */,
+				FF55375A1AB1B4BE00CDCA0E /* 3.m4a */,
+				FF55375B1AB1B4BE00CDCA0E /* 4.m4a */,
+				FF55375C1AB1B4BE00CDCA0E /* 5.m4a */,
+				FF55375D1AB1B4BE00CDCA0E /* 6.m4a */,
+				FF55375E1AB1B4BE00CDCA0E /* 7.m4a */,
+				FF55375F1AB1B4BE00CDCA0E /* 8.m4a */,
+				FF5537601AB1B4BE00CDCA0E /* 9.m4a */,
+				FF5537611AB1B4BE00CDCA0E /* A.m4a */,
+				FF5537621AB1B4BE00CDCA0E /* B.m4a */,
+				FF5537631AB1B4BE00CDCA0E /* C.m4a */,
+				FF5537641AB1B4BE00CDCA0E /* D.m4a */,
+				FF5537531AB1867C00CDCA0E /* beep-01a.wav */,
+				FF5537541AB1867C00CDCA0E /* beep-06.wav */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		FF5F69171AB2DDC60002F5C9 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3B1401AB301CB0038C564 /* OISHI.png */,
+				FFE3B1411AB301CB0038C564 /* Sukishi.png */,
+				FFE3B1421AB301CB0038C564 /* Yum Zaap.png */,
+				FF5F691C1AB2E6320002F5C9 /* Fuji.png */,
+				FF5F691D1AB2E6320002F5C9 /* MK.png */,
+				FF5F691E1AB2E6320002F5C9 /* Sizzler.png */,
+				FF5F69191AB2DDE10002F5C9 /* CoCo ICHIBANYA.png */,
+			);
+			name = Restaurant;
+			sourceTree = "<group>";
+		};
+		FFC744BF1A88514F0051B390 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFC744C01A8851950051B390 /* Branch.swift */,
+				FFC744C11A8851950051B390 /* CurrentRunningNo.swift */,
+				FFC744C21A8851950051B390 /* Customer.swift */,
+				FFC744C41A8851950051B390 /* Queue.swift */,
+				FFC744C51A8851950051B390 /* Restaurant.swift */,
+				FFC744C61A8851950051B390 /* ShoppingMall.swift */,
+				FFC744C71A8851950051B390 /* TodoItem.swift */,
+				FFC744C81A8851950051B390 /* UserStaff.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FFC744D21A8852170051B390 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				666690D31A8E6308003A15F2 /* UserStaffController.swift */,
+				FFC744D31A8852570051B390 /* BranchController.swift */,
+				FFC744D51A8852570051B390 /* CustomerController.swift */,
+				FFC744D41A8852570051B390 /* CurrentRunningNoController.swift */,
+				FFC744D61A8852570051B390 /* QueueController.swift */,
+				FFC744D71A8852570051B390 /* RestaurantController.swift */,
+				FFC744D81A8852570051B390 /* ShoppingMallController.swift */,
+				6690532A1A9E204C00EBCF59 /* DataController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FFD7142B1A5D1A7300A3FA74 /* Branch Admin */ = {
+			isa = PBXGroup;
+			children = (
+				FF2257311AAAB60600FFFC65 /* MainDetailBranchViewController.swift */,
+				FF120D371A5539C300F5E8A3 /* MasterTableViewController.swift */,
+				FF10B52D1A599CEF00C30E41 /* Booking Q */,
+				FF10B52C1A599CBC00C30E41 /* Manage Q */,
+				FF10B52B1A599C9B00C30E41 /* Branch Information */,
+			);
+			name = "Branch Admin";
+			sourceTree = "<group>";
+		};
+		FFD7142C1A5D1BB300A3FA74 /* Restaurant Admin */ = {
+			isa = PBXGroup;
+			children = (
+				FFD714381A5D1D0C00A3FA74 /* Noti Setting */,
+				FFD714331A5D1C8100A3FA74 /* Manage Branch */,
+				FFD7142F1A5D1C2900A3FA74 /* MasterResTableViewController.swift */,
+				FF5105781A5D85C70047ADAB /* MainDetailResViewController.swift */,
+			);
+			name = "Restaurant Admin";
+			sourceTree = "<group>";
+		};
+		FFD714331A5D1C8100A3FA74 /* Manage Branch */ = {
+			isa = PBXGroup;
+			children = (
+				FFC744DF1A885A6B0051B390 /* MallListResTableViewController.swift */,
+				FFD714311A5D1C7B00A3FA74 /* ManageBranchTableViewController.swift */,
+				FFD714341A5D1CC000A3FA74 /* ViewBranchViewController.swift */,
+				FFD714361A5D1CD200A3FA74 /* EditBranchViewController.swift */,
+				FFC744E31A885B3F0051B390 /* BranchStatusListResTableViewController.swift */,
+				FF3ECC7C1AB44D98003A2E5D /* ManageBranchViewController.swift */,
+				FF3ECC7E1AB44DBB003A2E5D /* ManageBranchAdminTableViewController.swift */,
+				FF3ECC801AB44DEC003A2E5D /* ViewBranchAdminViewController.swift */,
+				FF3ECC821AB44E0F003A2E5D /* EditBranchAdminViewController.swift */,
+				FF3ECC861AB47A9E003A2E5D /* AddBranchAdminViewController.swift */,
+			);
+			name = "Manage Branch";
+			sourceTree = "<group>";
+		};
+		FFD714381A5D1D0C00A3FA74 /* Noti Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FF52C98A1A87DF2B005F83B1 /* ViewCustNotiSettingResViewController.swift */,
+				FF52C98C1A87DF3E005F83B1 /* EditCustNotiSettingResViewController.swift */,
+			);
+			name = "Noti Setting";
+			sourceTree = "<group>";
+		};
+		FFF3ABD91A5E963700C983FA /* ManageQ_icon */ = {
+			isa = PBXGroup;
+			children = (
+				FF83D0311AAC827C002E5E02 /* Icon-76.png */,
+				FF83D0321AAC827C002E5E02 /* Icon-76@2x.png */,
+				FF518F321A8B41BF006F9663 /* menu_icon_resized1.png */,
+				FF518F341A8B439D006F9663 /* menu_icon_re.png */,
+				FFF3ABDA1A5E963700C983FA /* child.png */,
+				FFF3ABDB1A5E963700C983FA /* man.png */,
+				FFF3ABDC1A5E963700C983FA /* wheelchair.png */,
+			);
+			name = ManageQ_icon;
+			path = SmartQRes/imageSmartQ/ManageQ_icon;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF120D011A552B3B00F5E8A3 /* SmartQRes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF120D241A552B3B00F5E8A3 /* Build configuration list for PBXNativeTarget "SmartQRes" */;
+			buildPhases = (
+				FD3FB69B2D128E81F6B8ACBB /* Check Pods Manifest.lock */,
+				FF120CFE1A552B3B00F5E8A3 /* Sources */,
+				FF120CFF1A552B3B00F5E8A3 /* Frameworks */,
+				FF120D001A552B3B00F5E8A3 /* Resources */,
+				D2E7E5CE440AD5591C01B056 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartQRes;
+			productName = SmartQRes;
+			productReference = FF120D021A552B3B00F5E8A3 /* SmartQRes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF120D191A552B3B00F5E8A3 /* SmartQResTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF120D271A552B3B00F5E8A3 /* Build configuration list for PBXNativeTarget "SmartQResTests" */;
+			buildPhases = (
+				FF120D161A552B3B00F5E8A3 /* Sources */,
+				FF120D171A552B3B00F5E8A3 /* Frameworks */,
+				FF120D181A552B3B00F5E8A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF120D1C1A552B3B00F5E8A3 /* PBXTargetDependency */,
+			);
+			name = SmartQResTests;
+			productName = SmartQResTests;
+			productReference = FF120D1A1A552B3B00F5E8A3 /* SmartQResTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF120CFA1A552B3B00F5E8A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = BlueSeed;
+				TargetAttributes = {
+					FF120D011A552B3B00F5E8A3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					FF120D191A552B3B00F5E8A3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = FF120D011A552B3B00F5E8A3;
+					};
+				};
+			};
+			buildConfigurationList = FF120CFD1A552B3B00F5E8A3 /* Build configuration list for PBXProject "SmartQRes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF120CF91A552B3B00F5E8A3;
+			productRefGroup = FF120D031A552B3B00F5E8A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF120D011A552B3B00F5E8A3 /* SmartQRes */,
+				FF120D191A552B3B00F5E8A3 /* SmartQResTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF120D001A552B3B00F5E8A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5537721AB1B4BE00CDCA0E /* D.m4a in Resources */,
+				FF55376F1AB1B4BE00CDCA0E /* A.m4a in Resources */,
+				FFE3B1441AB301CB0038C564 /* Sukishi.png in Resources */,
+				FF5F69221AB2E6320002F5C9 /* Sizzler.png in Resources */,
+				FFF3ABE11A5E963700C983FA /* child.png in Resources */,
+				FF83D0331AAC827C002E5E02 /* Icon-76.png in Resources */,
+				FFF3ABE31A5E963700C983FA /* wheelchair.png in Resources */,
+				FF5F691B1AB2DDE10002F5C9 /* CoCo ICHIBANYA.png in Resources */,
+				FFE3B1471AB30A610038C564 /* end.m4a in Resources */,
+				FF5537681AB1B4BE00CDCA0E /* 3.m4a in Resources */,
+				FF5537701AB1B4BE00CDCA0E /* B.m4a in Resources */,
+				FF5537551AB1867C00CDCA0E /* beep-01a.wav in Resources */,
+				FF5F69211AB2E6320002F5C9 /* MK.png in Resources */,
+				FF55376B1AB1B4BE00CDCA0E /* 6.m4a in Resources */,
+				FFF3ABE51A5E963700C983FA /* SmartQ_logo.jpg in Resources */,
+				FF489A4E1A62D5F3003F3C38 /* SmartQ_logo_OrangeBG.png in Resources */,
+				FF5537661AB1B4BE00CDCA0E /* 1.m4a in Resources */,
+				FFF3ABE61A5E963700C983FA /* SmartQ_logo.png in Resources */,
+				FF5537691AB1B4BE00CDCA0E /* 4.m4a in Resources */,
+				FF83D0341AAC827C002E5E02 /* Icon-76@2x.png in Resources */,
+				666690D61A8E66E8003A15F2 /* smartqlist.plist in Resources */,
+				FF5F69201AB2E6320002F5C9 /* Fuji.png in Resources */,
+				FF55376D1AB1B4BE00CDCA0E /* 8.m4a in Resources */,
+				FF5537651AB1B4BE00CDCA0E /* 0.m4a in Resources */,
+				FFE3B1431AB301CB0038C564 /* OISHI.png in Resources */,
+				FF5537671AB1B4BE00CDCA0E /* 2.m4a in Resources */,
+				FF55376C1AB1B4BE00CDCA0E /* 7.m4a in Resources */,
+				FF55376A1AB1B4BE00CDCA0E /* 5.m4a in Resources */,
+				FF120D101A552B3B00F5E8A3 /* Main.storyboard in Resources */,
+				FF5537561AB1867C00CDCA0E /* beep-06.wav in Resources */,
+				FF489A4C1A62D4DF003F3C38 /* Background_wood.jpg in Resources */,
+				FF518F331A8B41BF006F9663 /* menu_icon_resized1.png in Resources */,
+				FF5537711AB1B4BE00CDCA0E /* C.m4a in Resources */,
+				FFF3ABE21A5E963700C983FA /* man.png in Resources */,
+				FF55376E1AB1B4BE00CDCA0E /* 9.m4a in Resources */,
+				FF120D151A552B3B00F5E8A3 /* LaunchScreen.xib in Resources */,
+				FF518F351A8B439D006F9663 /* menu_icon_re.png in Resources */,
+				FF489A481A5F9806003F3C38 /* Podfile.lock in Resources */,
+				FF489A471A5F9806003F3C38 /* Podfile in Resources */,
+				FFE3B1451AB301CB0038C564 /* Yum Zaap.png in Resources */,
+				FF120D121A552B3B00F5E8A3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF120D181A552B3B00F5E8A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2E7E5CE440AD5591C01B056 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD3FB69B2D128E81F6B8ACBB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF120CFE1A552B3B00F5E8A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5105791A5D85C70047ADAB /* MainDetailResViewController.swift in Sources */,
+				FF10B5111A59530C00C30E41 /* ManageQTableViewCell.swift in Sources */,
+				FF52C97F1A87DC65005F83B1 /* ViewGeneralInfoViewController.swift in Sources */,
+				FF52C9871A87DD9E005F83B1 /* ViewCustNotiSettingViewController.swift in Sources */,
+				FFC744CA1A8851950051B390 /* CurrentRunningNo.swift in Sources */,
+				669053291A9C178B00EBCF59 /* ViewControllerUtils.swift in Sources */,
+				FF120D381A5539C300F5E8A3 /* MasterTableViewController.swift in Sources */,
+				FF52C9831A87DD4F005F83B1 /* ViewTableTypeSettingViewController.swift in Sources */,
+				FFD714371A5D1CD200A3FA74 /* EditBranchViewController.swift in Sources */,
+				FF3ECC7D1AB44D98003A2E5D /* ManageBranchViewController.swift in Sources */,
+				FF3ECC831AB44E0F003A2E5D /* EditBranchAdminViewController.swift in Sources */,
+				FFC744E01A885A6C0051B390 /* MallListResTableViewController.swift in Sources */,
+				FFC744DD1A8852570051B390 /* RestaurantController.swift in Sources */,
+				FFC744DA1A8852570051B390 /* CurrentRunningNoController.swift in Sources */,
+				FFC744DC1A8852570051B390 /* QueueController.swift in Sources */,
+				FF3ECC811AB44DEC003A2E5D /* ViewBranchAdminViewController.swift in Sources */,
+				FF3ECC7F1AB44DBB003A2E5D /* ManageBranchAdminTableViewController.swift in Sources */,
+				6690532B1A9E204C00EBCF59 /* DataController.swift in Sources */,
+				FFD714301A5D1C2900A3FA74 /* MasterResTableViewController.swift in Sources */,
+				FF120D361A55392900F5E8A3 /* ManageQViewController.swift in Sources */,
+				FF1F5FC41A5A415200646223 /* BranchInfoViewController.swift in Sources */,
+				666690D41A8E6308003A15F2 /* UserStaffController.swift in Sources */,
+				FF1F5FCD1A5A41EE00646223 /* MainDetailViewController.swift in Sources */,
+				FF120D0B1A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld in Sources */,
+				FFC744E81A885C290051B390 /* BranchStatusListTableViewController.swift in Sources */,
+				FFC744DB1A8852570051B390 /* CustomerController.swift in Sources */,
+				FF120D081A552B3B00F5E8A3 /* AppDelegate.swift in Sources */,
+				FFC744CB1A8851950051B390 /* Customer.swift in Sources */,
+				FF3ECC871AB47A9E003A2E5D /* AddBranchAdminViewController.swift in Sources */,
+				FFC744E61A885BF40051B390 /* MallListTableViewController.swift in Sources */,
+				FFAF2AB61AAC3D4F00B7F00A /* CommonConstants.swift in Sources */,
+				FFC744D01A8851950051B390 /* TodoItem.swift in Sources */,
+				FF52C98B1A87DF2B005F83B1 /* ViewCustNotiSettingResViewController.swift in Sources */,
+				FF52C98D1A87DF3E005F83B1 /* EditCustNotiSettingResViewController.swift in Sources */,
+				FFC744D11A8851950051B390 /* UserStaff.swift in Sources */,
+				FFC744D91A8852570051B390 /* BranchController.swift in Sources */,
+				FFC744DE1A8852570051B390 /* ShoppingMallController.swift in Sources */,
+				FF1F5FCC1A5A41EE00646223 /* LogInViewController.swift in Sources */,
+				FF1A9C3D1A593FC70059219A /* ConfirmBookingViewController.swift in Sources */,
+				FF2257321AAAB60600FFFC65 /* MainDetailBranchViewController.swift in Sources */,
+				FFC744C91A8851950051B390 /* Branch.swift in Sources */,
+				FFC744CC1A8851950051B390 /* DataConnection.swift in Sources */,
+				FFD714351A5D1CC000A3FA74 /* ViewBranchViewController.swift in Sources */,
+				FF52C9891A87DDAF005F83B1 /* EditCustNotiSettingViewController.swift in Sources */,
+				666690D21A8E60DE003A15F2 /* WelcomeViewController.swift in Sources */,
+				FFC744CD1A8851950051B390 /* Queue.swift in Sources */,
+				FFD714321A5D1C7B00A3FA74 /* ManageBranchTableViewController.swift in Sources */,
+				FFC744CF1A8851950051B390 /* ShoppingMall.swift in Sources */,
+				FF52C9811A87DC78005F83B1 /* EditGeneralInfoViewController.swift in Sources */,
+				FF1F5FC21A5A413800646223 /* BookingQViewController.swift in Sources */,
+				FF52C9851A87DD62005F83B1 /* EditTableTypeSettingViewController.swift in Sources */,
+				FFC744E41A885B3F0051B390 /* BranchStatusListResTableViewController.swift in Sources */,
+				FFC744CE1A8851950051B390 /* Restaurant.swift in Sources */,
+				FF3ECC851AB454C8003A2E5D /* MainDetailTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF120D161A552B3B00F5E8A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF120D211A552B3B00F5E8A3 /* SmartQResTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF120D1C1A552B3B00F5E8A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF120D011A552B3B00F5E8A3 /* SmartQRes */;
+			targetProxy = FF120D1B1A552B3B00F5E8A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF120D0E1A552B3B00F5E8A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF120D0F1A552B3B00F5E8A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF120D131A552B3B00F5E8A3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF120D141A552B3B00F5E8A3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF120D221A552B3B00F5E8A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FF120D231A552B3B00F5E8A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF120D251A552B3B00F5E8A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1852FA73F43A1F4261EBCE64 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/CloudantToolkit/frameworks",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/google-plus-ios-sdk/google-plus-ios-sdk-1.7.1",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/IMFCore/frameworks",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/IMFPush/frameworks",
+				);
+				INFOPLIST_FILE = SmartQRes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartQRes/SmartQRes-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		FF120D261A552B3B00F5E8A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58F15B4F2336945E9BEB3E72 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/CloudantToolkit/frameworks",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/google-plus-ios-sdk/google-plus-ios-sdk-1.7.1",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/IMFCore/frameworks",
+					"/Volumes/NINGUCHI/bluelist-swift/Pods/IMFPush/frameworks",
+				);
+				INFOPLIST_FILE = SmartQRes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartQRes/SmartQRes-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		FF120D281A552B3B00F5E8A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmartQResTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartQRes.app/SmartQRes";
+			};
+			name = Debug;
+		};
+		FF120D291A552B3B00F5E8A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmartQResTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartQRes.app/SmartQRes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF120CFD1A552B3B00F5E8A3 /* Build configuration list for PBXProject "SmartQRes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF120D221A552B3B00F5E8A3 /* Debug */,
+				FF120D231A552B3B00F5E8A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF120D241A552B3B00F5E8A3 /* Build configuration list for PBXNativeTarget "SmartQRes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF120D251A552B3B00F5E8A3 /* Debug */,
+				FF120D261A552B3B00F5E8A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF120D271A552B3B00F5E8A3 /* Build configuration list for PBXNativeTarget "SmartQResTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF120D281A552B3B00F5E8A3 /* Debug */,
+				FF120D291A552B3B00F5E8A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF120D091A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF120D0A1A552B3B00F5E8A3 /* SmartQRes.xcdatamodel */,
+			);
+			currentVersion = FF120D0A1A552B3B00F5E8A3 /* SmartQRes.xcdatamodel */;
+			path = SmartQRes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FF120CFA1A552B3B00F5E8A3 /* Project object */;
+}
