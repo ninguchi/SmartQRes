@@ -51,7 +51,7 @@ class ManageBranchAdminTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.textLabel!.text = adminList[indexPath.row].uss_username as String
-        cell.textLabel!.font = UIFont(name: "Heiti SC", size: 15)
+        cell.textLabel!.font = UIFont(name: "Century Gothic", size: 15)
         return cell
     }
 

@@ -13,6 +13,12 @@
 		669053291A9C178B00EBCF59 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669053281A9C178B00EBCF59 /* ViewControllerUtils.swift */; };
 		6690532B1A9E204C00EBCF59 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690532A1A9E204C00EBCF59 /* DataController.swift */; };
 		9D0FAD02E9CF826194CD4126 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 105AB39828681B7066B81931 /* libPods.a */; };
+		A102130F1C0567270085FE13 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102130E1C0567270085FE13 /* OrderListViewController.swift */; };
+		A10213111C056F980085FE13 /* OrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10213101C056F980085FE13 /* OrderListTableViewController.swift */; };
+		A10213121C05ADAB0085FE13 /* Sukishi.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1411AB301CB0038C564 /* Sukishi.png */; };
+		A10213131C05ADAB0085FE13 /* Sizzler.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F691E1AB2E6320002F5C9 /* Sizzler.png */; };
+		A1A60A9A1C4DFECF00157FD1 /* ufonts.com_century-gothic-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1A60A981C4DFECF00157FD1 /* ufonts.com_century-gothic-bold.ttf */; };
+		A1A60A9B1C4DFECF00157FD1 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1A60A991C4DFECF00157FD1 /* ufonts.com_century-gothic.ttf */; };
 		FF10B5111A59530C00C30E41 /* ManageQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10B5101A59530C00C30E41 /* ManageQTableViewCell.swift */; };
 		FF120D081A552B3B00F5E8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF120D071A552B3B00F5E8A3 /* AppDelegate.swift */; };
 		FF120D0B1A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF120D091A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld */; };
@@ -68,7 +74,6 @@
 		FF5F691B1AB2DDE10002F5C9 /* CoCo ICHIBANYA.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F69191AB2DDE10002F5C9 /* CoCo ICHIBANYA.png */; };
 		FF5F69201AB2E6320002F5C9 /* Fuji.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F691C1AB2E6320002F5C9 /* Fuji.png */; };
 		FF5F69211AB2E6320002F5C9 /* MK.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F691D1AB2E6320002F5C9 /* MK.png */; };
-		FF5F69221AB2E6320002F5C9 /* Sizzler.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5F691E1AB2E6320002F5C9 /* Sizzler.png */; };
 		FF83D0331AAC827C002E5E02 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = FF83D0311AAC827C002E5E02 /* Icon-76.png */; };
 		FF83D0341AAC827C002E5E02 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF83D0321AAC827C002E5E02 /* Icon-76@2x.png */; };
 		FFAF2AB61AAC3D4F00B7F00A /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF2AB51AAC3D4F00B7F00A /* CommonConstants.swift */; };
@@ -96,7 +101,6 @@
 		FFD714351A5D1CC000A3FA74 /* ViewBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD714341A5D1CC000A3FA74 /* ViewBranchViewController.swift */; };
 		FFD714371A5D1CD200A3FA74 /* EditBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD714361A5D1CD200A3FA74 /* EditBranchViewController.swift */; };
 		FFE3B1431AB301CB0038C564 /* OISHI.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1401AB301CB0038C564 /* OISHI.png */; };
-		FFE3B1441AB301CB0038C564 /* Sukishi.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1411AB301CB0038C564 /* Sukishi.png */; };
 		FFE3B1451AB301CB0038C564 /* Yum Zaap.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1421AB301CB0038C564 /* Yum Zaap.png */; };
 		FFE3B1471AB30A610038C564 /* end.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B1461AB30A610038C564 /* end.m4a */; };
 		FFF3ABE11A5E963700C983FA /* child.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF3ABDA1A5E963700C983FA /* child.png */; };
@@ -125,6 +129,10 @@
 		666690D51A8E66E8003A15F2 /* smartqlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = smartqlist.plist; sourceTree = "<group>"; };
 		669053281A9C178B00EBCF59 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
 		6690532A1A9E204C00EBCF59 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A102130E1C0567270085FE13 /* OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		A10213101C056F980085FE13 /* OrderListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListTableViewController.swift; sourceTree = "<group>"; };
+		A1A60A981C4DFECF00157FD1 /* ufonts.com_century-gothic-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic-bold.ttf"; sourceTree = "<group>"; };
+		A1A60A991C4DFECF00157FD1 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
 		FF10B5101A59530C00C30E41 /* ManageQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageQTableViewCell.swift; sourceTree = "<group>"; };
 		FF120D021A552B3B00F5E8A3 /* SmartQRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartQRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF120D061A552B3B00F5E8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -242,6 +250,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1A60A971C4DFC9500157FD1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A1A60A981C4DFECF00157FD1 /* ufonts.com_century-gothic-bold.ttf */,
+				A1A60A991C4DFECF00157FD1 /* ufonts.com_century-gothic.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		A6F7AEEC2DB72374D6BAB831 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +297,8 @@
 			children = (
 				FF120D351A55392900F5E8A3 /* ManageQViewController.swift */,
 				FF10B5101A59530C00C30E41 /* ManageQTableViewCell.swift */,
+				A102130E1C0567270085FE13 /* OrderListViewController.swift */,
+				A10213101C056F980085FE13 /* OrderListTableViewController.swift */,
 			);
 			name = "Manage Q";
 			sourceTree = "<group>";
@@ -318,6 +337,7 @@
 		FF120D041A552B3B00F5E8A3 /* SmartQRes */ = {
 			isa = PBXGroup;
 			children = (
+				A1A60A971C4DFC9500157FD1 /* Font */,
 				FF120D2E1A552DD900F5E8A3 /* ImageSmartQ */,
 				FF5537521AB1863E00CDCA0E /* Sound */,
 				FFC744D21A8852170051B390 /* Controller */,
@@ -597,10 +617,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10213121C05ADAB0085FE13 /* Sukishi.png in Resources */,
+				A10213131C05ADAB0085FE13 /* Sizzler.png in Resources */,
+				A1A60A9B1C4DFECF00157FD1 /* ufonts.com_century-gothic.ttf in Resources */,
+				A1A60A9A1C4DFECF00157FD1 /* ufonts.com_century-gothic-bold.ttf in Resources */,
 				FF5537721AB1B4BE00CDCA0E /* D.m4a in Resources */,
 				FF55376F1AB1B4BE00CDCA0E /* A.m4a in Resources */,
-				FFE3B1441AB301CB0038C564 /* Sukishi.png in Resources */,
-				FF5F69221AB2E6320002F5C9 /* Sizzler.png in Resources */,
 				FFF3ABE11A5E963700C983FA /* child.png in Resources */,
 				FF83D0331AAC827C002E5E02 /* Icon-76.png in Resources */,
 				FFF3ABE31A5E963700C983FA /* wheelchair.png in Resources */,
@@ -713,6 +735,7 @@
 				FF1F5FCD1A5A41EE00646223 /* MainDetailViewController.swift in Sources */,
 				FF120D0B1A552B3B00F5E8A3 /* SmartQRes.xcdatamodeld in Sources */,
 				FFC744E81A885C290051B390 /* BranchStatusListTableViewController.swift in Sources */,
+				A102130F1C0567270085FE13 /* OrderListViewController.swift in Sources */,
 				FFC744DB1A8852570051B390 /* CustomerController.swift in Sources */,
 				FF120D081A552B3B00F5E8A3 /* AppDelegate.swift in Sources */,
 				FFC744CB1A8851950051B390 /* Customer.swift in Sources */,
@@ -723,6 +746,7 @@
 				FF52C98B1A87DF2B005F83B1 /* ViewCustNotiSettingResViewController.swift in Sources */,
 				FF52C98D1A87DF3E005F83B1 /* EditCustNotiSettingResViewController.swift in Sources */,
 				FFC744D11A8851950051B390 /* UserStaff.swift in Sources */,
+				A10213111C056F980085FE13 /* OrderListTableViewController.swift in Sources */,
 				FFC744D91A8852570051B390 /* BranchController.swift in Sources */,
 				FFC744DE1A8852570051B390 /* ShoppingMallController.swift in Sources */,
 				FF1F5FCC1A5A41EE00646223 /* LogInViewController.swift in Sources */,
@@ -867,6 +891,8 @@
 			baseConfigurationReference = 1852FA73F43A1F4261EBCE64 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/NINGUCHI/bluelist-swift/Pods/CloudantToolkit/frameworks",
@@ -887,6 +913,8 @@
 			baseConfigurationReference = 58F15B4F2336945E9BEB3E72 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/NINGUCHI/bluelist-swift/Pods/CloudantToolkit/frameworks",

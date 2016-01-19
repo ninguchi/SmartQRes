@@ -74,6 +74,9 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
     var branch = Branch()
     
     let instance = SingletonClass.shared
+    
+    var status = 1
+    var queueNo = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +116,7 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
         self.btnCallNextQC.layer.cornerRadius = 5
         self.btnCallNextQD.layer.cornerRadius = 5
         //self.hideTrigger()
+        
         
     }
     
@@ -295,13 +299,18 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
         
         if tableView == self.tableViewTypeAWaiting || tableView == self.tableViewTypeBWaiting || tableView == self.tableViewTypeCWaiting || tableView == self.tableViewTypeDWaiting {
             // Waiting
-            let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
-            a.addAction(okButton)
+            //let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            //a.addAction(okButton)
+            status = 0
+            queueNo = "\(currentList[index].que_tb_type)\(currentList[index].que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+            performSegueWithIdentifier("confirmOrderSegue", sender: msg)
         }else{
             // No show
             let okButton = UIAlertAction(title: "Complete", style: .Default){
                 (action) -> Void in
                 self.updateToComplete(currentList[index])
+                self.queueNo = "\(currentList[index].que_tb_type)\(currentList[index].que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                self.performSegueWithIdentifier("confirmOrderSegue", sender: msg)
                 if(currentList[index].que_tb_type == Constants.TableType.A){
                     self.listQueueTypeANoShow.removeAtIndex(index)
                     self.tableViewTypeANoShow.reloadData()
@@ -362,7 +371,7 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
                 //print("New Current : Queue No \(self.curQueueTypeA.que_no), Queue Status \(self.curQueueTypeA.que_status), Queue Flag \(self.curQueueTypeA.que_current_flag)")
                 self.listQueueTypeAWaiting.removeAtIndex(0)
                 self.tableViewTypeAWaiting.reloadData()
-                self.btnCurrentTypeA.titleLabel?.text = "\(self.curQueueTypeA.que_tb_type)\(self.curQueueTypeA.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                self.btnCurrentTypeA.setTitle("\(self.curQueueTypeA.que_tb_type)\(self.curQueueTypeA.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                 //print("listQueueTypeAWaiting = \(self.listQueueTypeAWaiting.count)")
                             // reload No Show to update no show list
                 //QueueController().instance.pullItems()
@@ -395,7 +404,7 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
                 //print("New Current : Queue No \(self.curQueueTypeB.que_no), Queue Status \(self.curQueueTypeB.que_status), Queue Flag \(self.curQueueTypeB.que_current_flag)")
                 self.listQueueTypeBWaiting.removeAtIndex(0)
                 self.tableViewTypeBWaiting.reloadData()
-                self.btnCurrentTypeB.titleLabel?.text = "\(self.curQueueTypeB.que_tb_type)\(self.curQueueTypeB.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                self.btnCurrentTypeB.setTitle("\(self.curQueueTypeB.que_tb_type)\(self.curQueueTypeB.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                 //print("listQueueTypeBWaiting = \(self.listQueueTypeBWaiting.count)")
                 //QueueController().instance.pullItems()
                 //QueueController().getNoShowQueueListByType(branchId, type:Constants.TableType.B, uiView: self)
@@ -425,7 +434,7 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
                 //print("New Current : Queue No \(self.curQueueTypeC.que_no), Queue Status \(self.curQueueTypeC.que_status), Queue Flag \(self.curQueueTypeC.que_current_flag)")
                 self.listQueueTypeCWaiting.removeAtIndex(0)
                 self.tableViewTypeCWaiting.reloadData()
-                self.btnCurrentTypeC.titleLabel?.text = "\(self.curQueueTypeC.que_tb_type)\(self.curQueueTypeC.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                self.btnCurrentTypeC.setTitle("\(self.curQueueTypeC.que_tb_type)\(self.curQueueTypeC.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                
                 //QueueController().instance.pullItems()
                 //QueueController().getNoShowQueueListByType(branchId, type:Constants.TableType.C, uiView: self)
@@ -456,7 +465,7 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
                 self.listQueueTypeDWaiting.removeAtIndex(0)
                 self.tableViewTypeDWaiting.reloadData()
                 
-                self.btnCurrentTypeD.titleLabel?.text = "\(self.curQueueTypeD.que_tb_type)\(self.curQueueTypeD.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                self.btnCurrentTypeD.setTitle("\(self.curQueueTypeD.que_tb_type)\(self.curQueueTypeD.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                 //print("listQueueTypeDWaiting = \(self.listQueueTypeDWaiting.count)")
                 //QueueController().instance.pullItems()
                 //QueueController().getNoShowQueueListByType(branchId, type:Constants.TableType.D, uiView: self)
@@ -477,16 +486,19 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
         QueueController().getCurrentQueueByType(branchId, type: Constants.TableType.A, uiView: self)
         NSThread.sleepForTimeInterval(0.1)
         if(self.curQueueTypeA.que_status == Constants.QueueStatus.Waiting){
-            
+                            
             self.popupUpdateCurrentQStatus(self.curQueueTypeA, btnCurrent: self.btnCurrentTypeA, tableNoShow: self.tableViewTypeANoShow, isCallFromNextQ : Constants.Flag.NO)
         }else if(self.curQueueTypeA.que_status == Constants.QueueStatus.NoShow || self.curQueueTypeA.que_status == Constants.QueueStatus.Completed || self.curQueueTypeA.que_status == Constants.QueueStatus.Cancelled){
 
             let msg = self.getContentPopup(self.curQueueTypeA, index: 0)
-            let a = UIAlertController(title: "\(self.curQueueTypeA.que_tb_type)\(self.curQueueTypeA.que_no.integerValue.format(Constants.DecimalFormat.Queue))", message: msg, preferredStyle: .Alert)
+            /*let a = UIAlertController(title: "\(self.curQueueTypeA.que_tb_type)\(self.curQueueTypeA.que_no.integerValue.format(Constants.DecimalFormat.Queue))", message: msg, preferredStyle: .Alert)
             
             let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
             a.addAction(okButton)
-            self.presentViewController(a, animated: true, completion: nil)
+            self.presentViewController(a, animated: true, completion: nil)*/
+            status = 0
+            queueNo = "\(self.curQueueTypeA.que_tb_type)\(self.curQueueTypeA.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+            performSegueWithIdentifier("confirmOrderSegue", sender: msg)
         }
     }
     
@@ -500,11 +512,15 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
         }else if(self.curQueueTypeB.que_status == Constants.QueueStatus.NoShow || self.curQueueTypeB.que_status == Constants.QueueStatus.Completed){
 
             let msg = self.getContentPopup(self.curQueueTypeB, index: 0)
-            let a = UIAlertController(title: "\(self.curQueueTypeB.que_tb_type)\(self.curQueueTypeB.que_no.integerValue.format(Constants.DecimalFormat.Queue))", message: msg, preferredStyle: .Alert)
+            
+            /*let a = UIAlertController(title: "\(self.curQueueTypeB.que_tb_type)\(self.curQueueTypeB.que_no.integerValue.format(Constants.DecimalFormat.Queue))", message: msg, preferredStyle: .Alert)
             
             let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
             a.addAction(okButton)
-            self.presentViewController(a, animated: true, completion: nil)
+            self.presentViewController(a, animated: true, completion: nil)*/
+            status = 0
+            queueNo = "\(self.curQueueTypeB.que_tb_type)\(self.curQueueTypeB.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+            performSegueWithIdentifier("confirmOrderSegue", sender: msg)
         }
     }
 
@@ -517,10 +533,15 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
             self.popupUpdateCurrentQStatus(self.curQueueTypeC, btnCurrent: self.btnCurrentTypeC, tableNoShow: self.tableViewTypeCNoShow, isCallFromNextQ : Constants.Flag.NO)
         }else if(self.curQueueTypeC.que_status == Constants.QueueStatus.NoShow || self.curQueueTypeC.que_status == Constants.QueueStatus.Completed){
             let msg = self.getContentPopup(self.curQueueTypeC, index: 0)
+            /*
             let a = UIAlertController(title: "\(self.curQueueTypeC.que_tb_type)\(self.curQueueTypeC.que_no.integerValue.format(Constants.DecimalFormat.Queue))", message: msg, preferredStyle: .Alert)
             let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
             a.addAction(okButton)
             self.presentViewController(a, animated: true, completion: nil)
+*/
+            status = 0
+            queueNo = "\(self.curQueueTypeC.que_tb_type)\(self.curQueueTypeC.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+            performSegueWithIdentifier("confirmOrderSegue", sender: msg)
         }
     }
     
@@ -533,10 +554,14 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
             self.popupUpdateCurrentQStatus(self.curQueueTypeD, btnCurrent: self.btnCurrentTypeD, tableNoShow: self.tableViewTypeDNoShow, isCallFromNextQ : Constants.Flag.NO)
         }else if(self.curQueueTypeD.que_status == Constants.QueueStatus.NoShow || self.curQueueTypeD.que_status == Constants.QueueStatus.Completed){
             let msg = self.getContentPopup(self.curQueueTypeD, index: 0)
+            /*
             let a = UIAlertController(title: "\(self.curQueueTypeD.que_tb_type)\(self.curQueueTypeD.que_no.integerValue.format(Constants.DecimalFormat.Queue))", message: msg, preferredStyle: .Alert)
             let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
             a.addAction(okButton)
-            self.presentViewController(a, animated: true, completion: nil)
+            self.presentViewController(a, animated: true, completion: nil)*/
+            status = 0
+            queueNo = "\(self.curQueueTypeD.que_tb_type)\(self.curQueueTypeD.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+            performSegueWithIdentifier("confirmOrderSegue", sender: msg)
         }
     }
     
@@ -573,6 +598,9 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
         let okButton = UIAlertAction(title: "Complete", style: .Default){
             (action) -> Void in
             self.updateToComplete(currentQ)
+            let msg = self.getContentPopup(currentQ, index: 0)
+            self.queueNo = "\(currentQ.que_tb_type)\(currentQ.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+            self.performSegueWithIdentifier("confirmOrderSegue", sender: msg)
             //print("Update Current Q Complete : Status is Completed and complete time is updated !! ")
         }
         let noShowButton = UIAlertAction(title: "No Show", style: .Default){
@@ -609,6 +637,7 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
     }
     
     func updateToComplete(currentQ : Queue){
+        status = 1
         let fromStatus = currentQ.que_status
         currentQ.que_complete_time = NSDate()
         currentQ.que_status = Constants.QueueStatus.Completed
@@ -617,6 +646,8 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
         }else if(fromStatus == Constants.QueueStatus.NoShow){
             QueueController().updateItem(currentQ)
         }
+       // performSegueWithIdentifier("confirmOrderSegue", sender: nil)
+        
     }
     
     func updateToCancel(currentQ : Queue){
@@ -714,14 +745,24 @@ class ManageQViewController: MainDetailViewController, UITableViewDelegate, UITa
         }
         audioPlayer.play()
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "confirmOrderSegue" {
+            let navVC = segue.destinationViewController as! UINavigationController
+            let orderListVC = navVC.topViewController as! OrderListViewController
+            orderListVC.queueNo = queueNo
+            if sender != nil{
+                let detail = sender as! String
+                orderListVC.queueInfo = detail
+            }
+            orderListVC.status = status
+        }
     }
-    */
+    
 
 }

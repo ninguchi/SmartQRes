@@ -23,6 +23,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate, CDTReplicatorD
     
     var frameView: UIView!
     
+    var originY : CGFloat = 0.0
+    let keyboardHight = 167.0
     var isShow = false;
     
     override func viewDidLoad() {
@@ -32,11 +34,40 @@ class LogInViewController: UIViewController, UITextFieldDelegate, CDTReplicatorD
         
         self.frameView = LoginView//UIView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         
-        // Keyboard stuff.
-        //var center: NSNotificationCenter = NSNotificationCenter.defaultCenter()
-        //center.addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        //center.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object: nil);
+        print("first page")
+        
     }
+    
+    deinit {
+        print("deinit")
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        originY = CGFloat(keyboardHight)*(-1)
+        UIView.animateWithDuration(0.25, delay: 0.25, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            if(self.view.frame.origin.y >= self.originY){
+                self.view.frame.origin.y -= CGFloat(self.keyboardHight)
+            }
+        }, completion: nil)
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        originY = CGFloat(keyboardHight)*(-1)
+        UIView.animateWithDuration(0.25, delay: 0.25, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            if(self.view.frame.origin.y < self.originY){
+                self.view.frame.origin.y = 0.0
+            }else{
+                self.view.frame.origin.y +=  CGFloat(self.keyboardHight)
+            }
+        }, completion: nil)
+    }
+/*
     func keyboardWillShow(notification: NSNotification) {
         if(!isShow){
         var info:NSDictionary = notification.userInfo!
@@ -67,6 +98,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, CDTReplicatorD
             }, completion: nil)
         isShow = false
     }
+*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

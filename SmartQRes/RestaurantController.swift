@@ -132,6 +132,30 @@ class RestaurantController{
             }
         })
     }
+    
+    func getResList () -> Void {
+        
+        var query : CDTQuery
+        query = CDTCloudantQuery(dataType: "Restaurant")
+        datastore.performQuery(query, completionHandler: {(results, error) -> Void in
+            if((error) != nil){
+                print(error)
+            }
+            else{
+                self.restaurantList = results as! [Restaurant]
+                
+                var os = NSMutableOrderedSet()
+                os.addObjectsFromArray(self.restaurantList)
+                let sd = NSSortDescriptor(key: "res_id", ascending: true)
+                os.sortUsingDescriptors([sd])
+                self.restaurantList = os.array as! [Restaurant]
+                for item in self.restaurantList {
+                    print("res id \(item.res_id) res_name \(item.res_name)" )
+                }
+            }
+        })
+    }
+
 
 
 }

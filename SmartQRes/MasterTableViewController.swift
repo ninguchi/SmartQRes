@@ -24,7 +24,7 @@ class MasterTableViewController: UITableViewController {
         BranchController().getBranchById(self.branchId, uiView: self)
         var nav = self.navigationController?.navigationBar
         nav?.barTintColor = UIColor(red: (254/255.0), green: (160/255.0), blue: (4/255.0), alpha: 1.0)
-        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Heiti SC", size: 20)!, NSForegroundColorAttributeName: UIColor(red: (36/255.0), green: (17/255.0), blue: (0/255.0), alpha: 1.0)]
+        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Century Gothic", size: 20)!, NSForegroundColorAttributeName: UIColor(red: (36/255.0), green: (17/255.0), blue: (0/255.0), alpha: 1.0)]
         nav?.tintColor = UIColor(red: (36/255.0), green: (17/255.0), blue: (0/255.0), alpha: 1.0)
     }
 

@@ -251,4 +251,53 @@ class UserStaffController {
             }
         })
     }
+    func getUserList () -> Void {
+        
+        var query : CDTQuery
+        query = CDTCloudantQuery(dataType: "UserStaff")
+        datastore.performQuery(query, completionHandler: {(results, error) -> Void in
+            if((error) != nil){
+                print(error)
+            }
+            else{
+                self.itemList = results as! [UserStaff]
+
+                var os = NSMutableOrderedSet()
+                os.addObjectsFromArray(self.itemList)
+                let sd = NSSortDescriptor(key: "uss_res_id", ascending: true)
+                os.sortUsingDescriptors([sd])
+                self.itemList = os.array as! [UserStaff]
+                for item in self.itemList {
+                    print("uss_id \(item.uss_id) uss_type \(item.uss_type) res id \(item.uss_res_id) bra_id \(item.uss_bra_id) name \(item.uss_username) pass \(item.uss_password)" )
+                }
+            }
+        })
+    }
+    func getUpdate(ussId : NSNumber){
+       // self.instance.pullItems()
+        var query:CDTQuery
+        self.datastore.createIndexWithName("viewUserStaffIndex", fields: ["uss_id"], completionHandler: { (error:NSError!) -> Void in
+        })
+        self.queryPredicate = NSPredicate(format: "(uss_id = %@)",ussId)
+        query = CDTCloudantQuery(dataType: "UserStaff", withPredicate: self.queryPredicate)
+        
+        self.datastore.performQuery(query, completionHandler: { (results, error) -> Void in
+            if((error) != nil) {
+                NSLog("listItems failed with error \(error)")
+                print(error)
+            }
+            else{
+                self.itemList = results as! [UserStaff]
+                if(self.itemList.count != 0){
+                    let userStaff = self.itemList[0] as UserStaff
+                    userStaff.uss_username = "Coco1"
+                    userStaff.uss_password = "Coco1"
+                    self.updateUserStaff(userStaff)
+                }
+                
+            }
+        })
+        
+    }
+
 }

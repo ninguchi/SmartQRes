@@ -45,7 +45,7 @@ class BranchStatusListResTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.textLabel!.text = Constants.List.branchStatusList[indexPath.row]
-        cell.textLabel!.font = UIFont(name: "Heiti SC", size: 14)
+        cell.textLabel!.font = UIFont(name: "Century Gothic", size: 14.0)!
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

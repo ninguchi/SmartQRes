@@ -97,16 +97,16 @@ class QueueController {
                     self.queue = self.queueList[i] as Queue
                     if(self.queue.que_tb_type == Constants.TableType.A){
                         uiView.curQueueTypeA = self.queue
-                        uiView.btnCurrentTypeA.titleLabel?.text = "A\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                        uiView.btnCurrentTypeA.setTitle("A\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                     }else if(self.queue.que_tb_type == Constants.TableType.B){
                         uiView.curQueueTypeB = self.queue
-                        uiView.btnCurrentTypeB.titleLabel?.text = "B\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                        uiView.btnCurrentTypeB.setTitle("B\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                     }else if(self.queue.que_tb_type == Constants.TableType.C){
                         uiView.curQueueTypeC = self.queue
-                        uiView.btnCurrentTypeC.titleLabel?.text = "C\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                        uiView.btnCurrentTypeC.setTitle("C\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                     }else if(self.queue.que_tb_type == Constants.TableType.D){
                         uiView.curQueueTypeD = self.queue
-                        uiView.btnCurrentTypeD.titleLabel?.text = "D\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))"
+                        uiView.btnCurrentTypeD.setTitle("D\(self.queue.que_no.integerValue.format(Constants.DecimalFormat.Queue))", forState: UIControlState.Normal)
                     }
                     //NSThread.sleepForTimeInterval(0.5)
                 }

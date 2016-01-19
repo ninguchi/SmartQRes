@@ -48,7 +48,7 @@ class MallListResTableViewController: UITableViewController {
         
         var shopping = self.shoppingMallList[indexPath.row] as ShoppingMall
         cell.textLabel!.text = shopping.sho_name as String
-        cell.textLabel!.font = UIFont(name: "Heiti SC", size: 14)
+        cell.textLabel!.font = UIFont(name: "Century Gothic", size: 14)
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -14,20 +14,26 @@ class MainDetailBranchViewController: UIViewController {
     @IBOutlet weak var labelBranchName: UILabel!
     var branchId:NSNumber = 0
     let instance = SingletonClass.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("Main Detail Branch View Controller")
         var nav = self.navigationController?.navigationBar
         nav?.barTintColor = UIColor(red: (254/255.0), green: (160/255.0), blue: (4/255.0), alpha: 1.0)
-        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Heiti SC", size: 20)!, NSForegroundColorAttributeName: UIColor(red: (36/255.0), green: (17/255.0), blue: (0/255.0), alpha: 1.0)]
+        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Century Gothic", size: 20.0)!, NSForegroundColorAttributeName: UIColor(red: (36/255.0), green: (17/255.0), blue: (0/255.0), alpha: 1.0)]
         nav?.tintColor = UIColor(red: (36/255.0), green: (17/255.0), blue: (0/255.0), alpha: 1.0)
         
+
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         let branchId:NSNumber = prefs.integerForKey("BRANCHID") as NSNumber
         print("User branchid \(branchId)")
         self.branchId = branchId
         BranchController().getBranchNameById(self.branchId,uiView: self)
+       // BranchController().getBranchList()
+       // UserStaffController().getUserList()
+        
+      //  BranchController().updateBranchById(19)
         //QueueController().getQueueById(0, uiView: self)
         //self.instance.pushItems()
         /*
@@ -282,6 +288,8 @@ class MainDetailBranchViewController: UIViewController {
         staff4.uss_username = "staff01"
         staff4.uss_password = "staff01"
        // UserStaffController().createUserStaff(staff4)*/
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -289,7 +297,28 @@ class MainDetailBranchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewDidAppear(animated: Bool) {
+      //  BranchController().getBranchNameById(self.branchId,uiView: self)
+       /*
+        var uss_id : NSNumber = 0
+        var uss_res_id : NSNumber = 0
+        var uss_bra_id : NSNumber = 0
+        var uss_type : NSNumber = 0
+        var uss_username : NSString = ""
+        var uss_password : NSString = ""
+        
+        var user = UserStaff()
+        user.uss_res_id = 2
+        user.uss_type = 1
+        user.uss_bra_id = 1
+        user.uss_username = "Sizzler1"
+        user.uss_password = "Sizzler1"
+         */
+     //   UserStaffController().createUserStaff(user)
+//UserStaffController().getUpdate(22)
+        //UserStaffController().getUserList()
+       // RestaurantController().getResList()
+    }
     /*
     // MARK: - Navigation
 

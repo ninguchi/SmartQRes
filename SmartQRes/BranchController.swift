@@ -480,6 +480,48 @@ class BranchController{
         })
     }
 
-    
-    
+    func getBranchList () -> Void {
+        
+        var query : CDTQuery
+        query = CDTCloudantQuery(dataType: "Branch")
+        datastore.performQuery(query, completionHandler: {(results, error) -> Void in
+            if((error) != nil){
+                print(error)
+            }
+            else{
+                self.branchList = results as! [Branch]
+                
+                var os = NSMutableOrderedSet()
+                os.addObjectsFromArray(self.branchList)
+                let sd = NSSortDescriptor(key: "bra_res_id", ascending: true)
+                os.sortUsingDescriptors([sd])
+                self.branchList = os.array as! [Branch]
+                for item in self.branchList {
+                    print("res id \(item.bra_res_id) bra_name \(item.bra_name) bra_id \(item.bra_id) " )
+                }
+            }
+        })
+    }
+    func updateBranchById(bra_id : NSNumber) -> Void {
+        var query : CDTQuery
+        //self.instance.pullItems()
+        self.queryPredicate = NSPredicate(format: "(bra_id = %@)", bra_id)
+        query = CDTCloudantQuery(dataType: "Branch", withPredicate: self.queryPredicate)
+        datastore.performQuery(query, completionHandler: {(results, error) -> Void in
+            if((error) != nil){
+                print(error)
+            }
+            else{
+                self.branchList = results as! [Branch]
+                for i in 0..<self.branchList.count{
+                    self.branch = self.branchList[i] as Branch
+                    self.branch.bra_name = "Siam Center"
+                    self.updateItem(self.branch)
+                    
+                }
+            }
+            
+        })
+        
+    }
 }

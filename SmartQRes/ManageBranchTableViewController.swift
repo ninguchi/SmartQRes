@@ -52,7 +52,7 @@ class ManageBranchTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel!.text = branchList[indexPath.row].bra_name as String
-        cell.textLabel!.font = UIFont(name: "Heiti SC", size: 15)
+        cell.textLabel!.font = UIFont(name: "Century Gothic", size: 15)
         return cell
     }
     /*
